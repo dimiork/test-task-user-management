@@ -1,0 +1,10 @@
+.user-form {
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__actions {
+    justify-content: space-around;
+  }
+}

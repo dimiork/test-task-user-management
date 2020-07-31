@@ -1,0 +1,37 @@
+<div class="users" *ngIf="users$ | async as users">
+  <button mat-raised-button color="primary" (click)="addUser()">
+    Add user
+  </button>
+  <form [formGroup]="filterForm">
+    <mat-form-field class="example-form-field">
+      <mat-label>Search keyword</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="keyword"
+        autocomplete="off"
+      />
+      <button
+        mat-button
+        *ngIf="!!filterForm.value.keyword"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="clearKeyword()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select formControlName="role" placeholder="Role">
+        <mat-option *ngIf="!!filterForm.value.role">All</mat-option>
+        <mat-option *ngFor="let role of roles; trackBy: role" [value]="role">
+          {{ role }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+  <app-users-grid [dataSource]="users" (editUserEvent)="editUser($event)" (removeUserEvent)="removeUser($event)"></app-users-grid>
+</div>

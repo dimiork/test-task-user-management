@@ -1,0 +1,54 @@
+<h1 mat-dialog-title>{{ data.action | titlecase }} User</h1>
+<form [formGroup]="userForm" (submit)="submitForm()" class="user-form">
+  <div mat-dialog-content class="user-form__content">
+
+    <mat-form-field class="example-form-field">
+      <mat-label>FirstName</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="firstName"
+        autocomplete="off"
+        [errorStateMatcher]="errorMatcher('firstName')"
+      />
+      <mat-error>{{ getErrorMessage("firstName") }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>LastName</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="lastName"
+        autocomplete="off"
+        [errorStateMatcher]="errorMatcher('lastName')"
+      />
+      <mat-error>{{ getErrorMessage("lastName") }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="email"
+        autocomplete="off"
+        [errorStateMatcher]="errorMatcher('email')"
+      />
+      <mat-error>{{ getErrorMessage("email") }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-select formControlName="role" placeholder="Role">
+        <mat-option *ngFor="let role of data.roles; trackBy: trackByFn;" [value]="role">
+          {{ role }}
+        </mat-option>
+      </mat-select>
+      <mat-error>{{ getErrorMessage("role") }}</mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="user-form__actions">
+    <button mat-button [disabled]="!!userForm.invalid" type="submit">Save</button>
+    <button mat-button (click)="onNoClick()" type="button">No Thanks</button>
+  </div>
+</form>
