@@ -127,6 +127,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@^10.1.1":
+  version "10.2.7"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-10.2.7.tgz#0ff82eb91b2653ea26909c57a460d4593b44f186"
+  integrity sha512-ZQjDfTRTn7JuAKsf3jiIdU2XBaxxGBi/ZWYv5Pb3HCl6B4PISsIE5VWRhkoUogoAB0MiFHpjnWeIqknJEm11YQ==
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~10.0.4":
   version "10.0.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-10.0.4.tgz#5c13500f3135e43b9e6e53534fdfbc283abb83cc"
@@ -207,6 +216,13 @@
   version "10.0.6"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-10.0.6.tgz#5c98f7ef95f716986968a51946a7b1b9e6e36d40"
   integrity sha512-C/+o4lLqyE2QX1brNBxf5yqBPxNpfRA8Rv0Nb1nQE0T6Y/AjyQWxYYl34fD6zk1WQfP3X8bUgkbhHhefmjVZKw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@angular/material@^10.1.1":
+  version "10.2.7"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-10.2.7.tgz#b84aeeca997dc64fbcc7969540e22434315bab68"
+  integrity sha512-uk6JkRrKHaM9VFMzX7pWC83YNLVgXPB3D8U1yjSOafCdWwrRZgUHGr8MPlSILCr3o2nxgg5SsKdWcWwHuXXUZA==
   dependencies:
     tslib "^2.0.0"
 
@@ -4759,7 +4775,7 @@ isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
 isarray@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-2.0.1.tgz#a37d94ed9cda2d59865c9f76fe596ee1f338741e"
-  integrity sha1-o32U7ZzaLVmGXJ92/llu4fM4dB4=
+  integrity sha512-c2cu3UxbI+b6kR3fy0nRnAhodsvR9dx7U5+znCOzdj6IfP3upFURTr0Xl5BlQZNKZjEtxrmVyfSdeE3O57smoQ==
 
 isbinaryfile@^4.0.6:
   version "4.0.6"
@@ -5638,7 +5654,7 @@ mquery@3.2.2:
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
-  integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+  integrity sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==
 
 ms@2.1.1:
   version "2.1.1"
@@ -6212,6 +6228,11 @@ parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parseqs@0.0.5:
   version "0.0.5"
@@ -7664,11 +7685,11 @@ socket.io-client@2.3.0:
     to-array "0.1.4"
 
 socket.io-parser@~3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-3.3.0.tgz#2b52a96a509fdf31440ba40fed6094c7d4f1262f"
-  integrity sha512-hczmV6bDgdaEbVqhAeVMM/jfUfzuEZHsQg6eOmLgJht6G3mPKMxYm75w2+qhAQZ+4X+1+ATZ+QFKeOZD5riHng==
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/socket.io-parser/-/socket.io-parser-3.3.2.tgz#ef872009d0adcf704f2fbe830191a14752ad50b6"
+  integrity sha512-FJvDBuOALxdCI9qwRrO/Rfp9yfndRtc1jSgVgV8FDraihmSP/MLGD5PEuJrNfjALvcQ+vMDM/33AWOYP/JSjDg==
   dependencies:
-    component-emitter "1.2.1"
+    component-emitter "~1.3.0"
     debug "~3.1.0"
     isarray "2.0.1"
 
